@@ -4,7 +4,7 @@
 	 * TV shows class, basic searching functionality
 	 * 
 	 * @package PHP::TVDB
-	 * @author Ryan Doherty <ryan@ryandoherty.com>
+	 * @author Ryan Doherty <ryan@ryandoherty.net>
 	 */
 
 	class TV_Shows extends TVDB {

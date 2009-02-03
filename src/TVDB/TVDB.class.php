@@ -3,7 +3,7 @@
 	 * Base TVDB library class, provides universal functions and variables
 	 *
 	 * @package PHP::TVDB
-	 * @author Ryan Doherty <ryan@ryandoherty.com>
+	 * @author Ryan Doherty <ryan@ryandoherty.net>
 	 **/
 	class TVDB {
 
@@ -32,20 +32,11 @@
 		 **/
 		protected function fetchData($url) {
 			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_HEADER, 1);
+			curl_setopt($ch, CURLOPT_HEADER, 0);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		
-			$response = curl_exec($ch);
-			
-			$httpCode = curl_getinfo($ch ,CURLINFO_HTTP_CODE);
-			$headerSize = curl_getinfo($ch,CURLINFO_HEADER_SIZE);
-            $data = substr( $response, $headerSize );
+			$data = curl_exec($ch);
 			curl_close($ch);
-			
-			if($httpCode != 200) {
-			    return false;
-			}
-			
 			return $data;
 		}
 		

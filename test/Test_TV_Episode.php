@@ -35,17 +35,5 @@
 
 		}
 		
-		
-		public function testEpisodeNotFound() {
-		
-		    
-	        $show = TV_Shows::findById($this->showId);
-	        $missingEpisode = $show->getEpisode(1, 99); //test for existing season, but not episode
-	        $this->assertFalse($missingEpisode, "Error fetching episode that doesn't exist from existing season");
-	        
-	        $missingSeason = $show->getEpisode(99, 1); //test for non-existing season and episode
-	        $this->assertFalse($missingSeason, "Error fetching episode for season that doesn't exist"); 
-	        
-		}
 	}
 ?>

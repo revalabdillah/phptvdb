@@ -3,7 +3,7 @@
 	 * Base class for interacting with TV shows
 	 *
 	 * @package PHP::TVDB
-	 * @author Ryan Doherty <ryan@ryandoherty.com>
+	 * @author Ryan Doherty <ryan@ryandoherty.net>
 	 */
 
 	class TV_Show extends TVDB {

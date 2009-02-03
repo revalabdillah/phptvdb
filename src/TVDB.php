@@ -2,7 +2,7 @@
 	/**
 	 * Library that encapsulates thetvdb.com API for easy access to TV show information
 	 *
-	 * @author Ryan Doherty <ryan@ryandoherty.com>
+	 * @author Ryan Doherty <ryan@ryandoherty.net>
 	 * @version 1.0
 	 * @copyright Ryan Doherty, 16 February, 2008
 	 * @package PHP::TVDB
@@ -12,7 +12,7 @@
 	/**
 	 * ADD YOUR API KEY HERE
 	 */
-	define('PHPTVDB_API_KEY', 'BF812C7DE414539B');
+	define('PHPTVDB_API_KEY', '');
 	
 	
 	//Include our files and we're done!

@@ -4,7 +4,7 @@
 	 * TV_Episode class. Class for single tv episode for a TV show.
 	 *
 	 * @package PHP::TVDB
-	 * @author Ryan Doherty <ryan@ryandoherty.com>
+	 * @author Ryan Doherty <ryan@ryandoherty.net>
 	 **/
 	class TV_Episode extends TVDB {
 		
