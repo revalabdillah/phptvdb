@@ -11,10 +11,8 @@
 		
 		public function testTvShow() {
 			$genres = array('Science-Fiction');
-			$actors = array('Tricia Helfer','Jamie Bamber','Katee Sackhoff','Grace Park','Mary McDonnell','Jim Callis','Edward James Olmos');
-			$overview = 'Ronald D. Moore, producer and writer of the first season of Carnivale, writer for shows such as Star Trek: The Next Generation, and Star Trek: Deep Space Nine boldly re-imagines this classic tale of good versus evil. Gone is the technobabble and mindless space battles of the shows earlier namesake. This is a program that introduces many new elements to the Galactica Tale. The Cylons look like us now, they could be anywhere, and they seem to have developed a monotheistic religion that is in contrast to the human polytheistic religion. The Cylons begin by wiping out the twelve colonies and sending the survivors all 47,000 (approx) of them on a desperate search for the fabled 13th colony. Earth.';
-			
-			
+			$actors = array("Edward James Olmos","Grace Park","James Callis", "Jamie Bamber", "Kandyse McClure", "Katee Sackhoff", "Mary McDonnell","Michael Hogan", "Michael Trucco", "Tricia Helfer");
+			$overview = 'In a distant part of the universe, a civilization of humans live on planets known as the Twelve Colonies. In the past, the Colonies have been at war with a cybernetic race known as the Cylons. With the help (knowing or unknowing) of a human named Baltar, the Cylons launch a devastating attack on the Colonies. Under the leadership of Commander Adama, the only military ship that survived the attack takes up the task of leading a small fugitive fleet of survivors into space in search of a fabled refuge known as Earth.';
 			
 			$show = TV_Shows::findById($this->showId);
 		    
