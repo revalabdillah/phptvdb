@@ -19,7 +19,6 @@
 
 			$show = TV_Shows::findById($this->showId);
 			$episode = $show->getEpisode($this->season, $this->episode);
-
 			$this->assertTrue($episode->name == 'Resurrection Ship (1)');
 			$this->assertTrue($episode->season == $this->season);
 			$this->assertTrue($episode->number == $this->episode);
