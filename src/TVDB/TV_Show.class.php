@@ -139,7 +139,7 @@
 			$this->genres = $this->removeEmptyIndexes(explode('|', (string)$config->Genre));
 			$this->actors = $this->removeEmptyIndexes(explode('|', (string)$config->Actors));
 			$this->overview = (string)$config->Overview;
-			$this->daysOfWeek = (string)$config->Airs_DayOfWeek;
+			$this->dayOfWeek = (string)$config->Airs_DayOfWeek;
 			$this->airTime = (string)$config->Airs_Time;
 			$this->rating = (string)$config->Rating;
 			$this->imdbId = (string)$config->IMDB_ID;

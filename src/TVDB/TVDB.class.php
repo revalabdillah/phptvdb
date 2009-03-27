@@ -5,15 +5,29 @@
 	 * @package PHP::TVDB
 	 * @author Ryan Doherty <ryan@ryandoherty.com>
 	 **/
+	 
+    /**
+     * Constants defined here outside of class because class constants can't be 
+     * the result of any operation (concatenation)
+     */
+    define('PHPTVDB_URL', 'http://thetvdb.com/');
+    define('PHPTVDB_API_URL', PHPTVDB_URL.'api/');
+	 
 	class TVDB {
 
 		/**
-		 * Base url for api requests
+		 * Base url for TheTVDB
 		 *
 		 * @var string
 		 */
 		
-		CONST apiUrl = 'http://thetvdb.com/api/';
+		CONST baseUrl = PHPTVDB_URL;
+		
+		/**
+		 * Base url for api requests
+		 */
+		
+		CONST apiUrl = PHPTVDB_API_URL;
 		
 		/**
 		 * API key for thetvdb.com
@@ -63,7 +77,7 @@
 				
 				case 'show_by_id':
 					$id = $params['id'];
-					$url = self::apiUrl.self::apiKey.'/series/'.$id;
+					$url = self::baseUrl.'data/series/'.$id.'/';
 					
 					$data = self::fetchData($url);
 					return $data;
@@ -74,7 +88,7 @@
 					$episode = $params['episode'];
 					$showId = $params['show_id'];
 					$url = self::apiUrl.self::apiKey.'/series/'.$showId.'/default/'.$season.'/'.$episode;
-					
+
 					$data = self::fetchData($url);
 					return $data;
 				break;
