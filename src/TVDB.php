@@ -7,14 +7,14 @@
 	 * @copyright Ryan Doherty, 16 February, 2008
 	 * @package PHP::TVDB
 	 **/
-	
-	
+
+
 	/**
 	 * ADD YOUR API KEY HERE
 	 */
 	define('PHPTVDB_API_KEY', '');
-	
-	
+
+
 	//Include our files and we're done!
 	require 'TVDB/TVDB.class.php';
 	require 'TVDB/TV_Show.class.php';

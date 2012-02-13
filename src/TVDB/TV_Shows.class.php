@@ -39,12 +39,15 @@
 		public static function findById($showId) {
 			$params = array('action' => 'show_by_id', 'id' => $showId);
 			$data = self::request($params);
-		
 			
 			if ($data) {
-				$xml = simplexml_load_string($data);
-				$show = new TV_Show($xml->Series);
-				return $show;
+				$xml = @simplexml_load_string($data);
+                if($xml) {
+    				$show = new TV_Show($xml->Series);
+    				return $show;
+                } else {
+                    return false;
+                }
 			} else {
 				return false;
 			}
