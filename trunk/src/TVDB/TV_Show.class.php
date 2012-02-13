@@ -169,5 +169,33 @@
 				return false;
 			}
 		}
+        
+        /**
+         * Get a season of episodes
+         * 
+         * @var int $season required the season number
+         * @return array an array of TV_Episodes that occurred
+         *               during the season
+         **/
+        public function getSeason($seasonNumber) {
+            $params = array('action' => 'get_all_episodes',
+                            'show_id' => $this->id);
+
+            $data = self::request($params);
+
+            if($data) {
+                $xml = simplexml_load_string($data);
+                $episodes = array();
+                foreach($xml->Episode as $episode) {
+                    if((int)$episode->SeasonNumber == $seasonNumber) {
+                        $episodes[] = $episode;
+                    }
+                }
+
+                return $episodes;
+            } else {
+                return false;
+            }
+        }
 	}
 ?>
