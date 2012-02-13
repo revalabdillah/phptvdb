@@ -19,6 +19,6 @@
 			$this->assertTrue($show);
 			$this->assertTrue($show->seriesName == 'Battlestar Galactica (2003)');
 			$this->assertTrue($show->id == $this->showId);
-		}	
+		}
 	}
 ?>
