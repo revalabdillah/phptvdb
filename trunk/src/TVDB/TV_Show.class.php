@@ -197,5 +197,33 @@
                 return false;
             }
         }
+
+
+        /**
+         * Get all episodes by show id
+         *
+         * @return array an array of TV_Episodes
+         **/
+         public function getAllEpisodes() {
+            $params = array('action' => 'get_all_episodes',
+                            'show_id' => $this->id);
+
+            $data = self::request($params);
+
+            if($data)
+            {
+                $xml = simplexml_load_string($data);
+                $episodes = array();
+                foreach($xml->Episode as $episode)
+                {
+                    $episodes[] = new TV_Episode($episode);
+                }
+                return $episodes;
+            }
+            else
+            {
+                return false;
+            }
+        }
 	}
 ?>
