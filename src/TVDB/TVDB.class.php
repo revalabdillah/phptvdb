@@ -48,6 +48,7 @@
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_HEADER, 1);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_ENCODING, "");
 
 			$response = curl_exec($ch);
 
